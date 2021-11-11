@@ -1,11 +1,12 @@
-import posts from "../data/posts"
+import posts from '../data/post';
 
-export const getBlogPosts = ()=>{
-    return new Promise((resolve,reject)=>{
-       setTimeout(()=>{
-           resolve(posts)
-       },500)
+export const getBlogPosts = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(posts)
+        }, 500)
     })
 }
+
 
 
