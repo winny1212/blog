@@ -1,5 +1,7 @@
 import React from 'react'
 import {BlogPost} from "./BlogPost"
+import {CardDeck} from "../styled-components"
+import { BlogPreview } from './BlogPreview';
 
 export const BlogPosts = (props) => {
     const {loading,posts} = props;
@@ -10,13 +12,15 @@ export const BlogPosts = (props) => {
             ?
             (<p>Loading...</p>)
             :
-            (<div>
+            (<CardDeck>
+            
                 {
                     posts.sort((a,b)=>b.updated_at - a.updated_at).map(post => 
-                    (<BlogPost key={post.id} post={post}/>))
+                    (<BlogPreview key={post.id} post={post}/>))
             
                 } 
-            </div>)
+           
+            </CardDeck>)
         }
       </>
   )

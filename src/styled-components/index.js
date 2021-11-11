@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 export const CardDeck = styled.div`
     display: flex;
     width: 80%; 
